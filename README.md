@@ -90,26 +90,26 @@ The various kinds of nodes are described below:
 Example
 -------
 
-The file ab.txt contains the following little program:
-........................................................................
-// This program should print the number 20.
-begin
-  int a;
-  int b;
-  a := 2;
-  b := 1;
-  if not a <  0 then
-    int b;
-    b := 0 - 2;     // b = -2    (the inner b, the outer one is still 1)
-    a := a * b      // a = -4
-  else
-    int c;
-    c := a - b;
-    a := a * (c - b)
-  fi;
-  print a * (a - b)    // -4 * (-4 - 1)  =  -4 * (-5)  =  20
-end
-........................................................................
+The file ab.txt contains the following little program:<br><br>
+........................................................................<br>
+// This program should print the number 20.<br>
+begin<br>
+  &emsp;int a;<br>
+  &emsp;int b;<br>
+  &emsp;a := 2;<br>
+  &emsp;b := 1;<br>
+  &emsp;if not a <  0 then<br>
+    &emsp;&emsp;int b;<br>
+    &emsp;&emsp;b := 0 - 2;     // b = -2    (the inner b, the outer one is still 1)<br>
+    &emsp;&emsp;a := a * b      // a = -4<br>
+  &emsp;else<br>
+    &emsp;&emsp;int c;<br>
+    &emsp;&emsp;c := a - b;<br>
+    &emsp;&emsp;a := a * (c - b)<br>
+  &emsp;fi;<br>
+  &emsp;print a * (a - b)    // -4 * (-4 - 1)  =  -4 * (-5)  =  20<br>
+end<br>
+........................................................................<br><br>
 
 The AST is the S-expression shown below.  (Notice that the
 two variables whose name is `b` have different offsets: 1 and 2. 
