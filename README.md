@@ -19,68 +19,68 @@ The various kinds of nodes are described below:
 
   - SEQ
        Corresponds to the semicolon, i.e., the sequencing operator.
-       Two children:
-         (0) the AST for the left-hand side of the semicolon;
-         (1) the AST for the right-had side of the semicolon.
+       Two children:<br><br>
+         &emsp;(0) the AST for the left-hand side of the semicolon;<br>
+         &emsp;(1) the AST for the right-had side of the semicolon.<br>
 
   - DECL
        Corresponds to a variable declaration.
-       Two children:
-         (0) the name of the declared identifier (an atom);
-         (1) the name of the type (i.e., the atom `int` or the atom `bool`).
+       Two children:<br><br>
+         &emsp;(0) the name of the declared identifier (an atom);<br>
+         &emsp;(1) the name of the type (i.e., the atom `int` or the atom `bool`).<br>
 
   - ASSIGNMENT
        Corresponds to the assignment statement.
-       Two children:
-         (0) the AST for the left-hand side of the assignment;
-         (1) the AST for the right-had side of the assignment.
+       Two children:<br><br>
+         &emsp;(0) the AST for the left-hand side of the assignment;<br>
+         &emsp;(1) the AST for the right-had side of the assignment.<br>
 
   - IF
        Corresponds to the conditional statement.
-       Three children:
-         (0) the AST for the boolean condition;
-         (1) the AST for the "then" branch;
-         (2) the AST for the "else" branch, or the empty list if there is no
-             "else".
+       Three children:<br><br>
+         &emsp;(0) the AST for the boolean condition;<br>
+         &emsp;(1) the AST for the "then" branch;<br>
+         &emsp;(2) the AST for the "else" branch, or the empty list if there is no
+             "else".<br>
 
   - WHILE
        Corresponds to the iterative statement.
-       Two children:
-         (0) the AST for the boolean condition;
-         (1) the AST for the body.
+       Two children:<br><br>
+         &emsp;(0) the AST for the boolean condition;<br>
+         &emsp;(1) the AST for the body.<br>
 
   - PRINT_INT, PRINT_BOOL
        Corresponds to a `print` statement (and encodes the type of the
        expression to be printed).
-       One child:
-         (0) the AST of the expression to be printed.
+       One child:<br><br>
+         &emsp;(0) the AST of the expression to be printed.<br>
 
   - OP_NOT
        Corresponds to the boolean negation operator.
-       One child:
-         (0) the AST for the expression to be negated.
+       One child:<br><br>
+         &emsp;(0) the AST for the expression to be negated.<br>
 
   - OP_AND, OP_OR, OP_EQ, OP_NEQ, OP_LT, OP_LTE, OP_GT, OP_GTE, OP_PLUS, OP_MINUS, OP_MULT, OP_DIV
        Correspond to the binary boolean and arithmetic operators.
-       Each of these has two children:
-         (0) the AST for the expression that is the left operand;
-         (1) the AST for the expression that is the right operand.
+       Each of these has two children:<br><br>
+         &emsp;(0) the AST for the expression that is the left operand;<br>
+         &emsp;(1) the AST for the expression that is the right operand.<br>
 
   - BOOL_LITERAL
        Corresponds to a boolean literal.
-       One "child":
-         (0) an atom representing a boolean constant (`False` or `True`).
+       One "child":<br><br>
+         &emsp;(0) an atom representing a boolean constant (`False` or `True`).<br>
 
   - INT_LITERAL
        Corresponds to an integer constant.
-       One "child":
-         (0) a Lisp integer constant.
+       One "child":<br><br>
+         &emsp;(0) a Lisp integer constant.<br>
 
   - VARIABLE
        Corresponds to an occurrence of a variable (outside declarations).
-       Two "children":
-         (0) the identifier itself (i.e., an atom);
-         (1) its offset in the variable store (an integer constant).
+       Two "children":<br><br>
+         &emsp;(0) the identifier itself (i.e., an atom);<br>
+         &emsp;(1) its offset in the variable store (an integer constant).<br><br>
        The offset uniquely identifies the variable in the current context (the
        identifier does not, since several variables with the same name may exist
        in different scopes). Different variables in disjoint contexts may have
