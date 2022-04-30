@@ -117,134 +117,134 @@ two variables whose name is `b` have different offsets: 1 and
 variable `b` declared in the "then" branch, because the scopes are
 disjoint.)
 ........................................................................
-(SEQ ab.txt:5:3:
-  (SEQ ab.txt:4:3:
-    (DECL ab.txt:3:7:
-      a  int
-    )
-    (DECL ab.txt:4:7:
-      b  int
-    )
-  )
-  (SEQ ab.txt:5:9:
-    (ASSIGNMENT ab.txt:5:5:
-      (VARIABLE ab.txt:5:3:
-        a  0
-      )
-      (INT_LITERAL ab.txt:5:8:
-        2
-      )
-    )
-    (SEQ ab.txt:6:9:
-      (ASSIGNMENT ab.txt:6:5:
-        (VARIABLE ab.txt:6:3:
-          b  1
-        )
-        (INT_LITERAL ab.txt:6:8:
-          1
-        )
-      )
-      (SEQ ab.txt:15:5:
-        (IF ab.txt:7:3:
-          (OP_NOT ab.txt:7:6:
-            (OP_LT ab.txt:7:12:
-              (VARIABLE ab.txt:7:10:
-                a  0
-              )
-              (INT_LITERAL ab.txt:7:15:
-                0
-              )
-            )
-          )
-          (SEQ ab.txt:9:5:
-            (DECL ab.txt:8:9:
-              b  int
-            )
-            (SEQ ab.txt:9:15:
-              (ASSIGNMENT ab.txt:9:7:
-                (VARIABLE ab.txt:9:5:
-                  b  2
-                )
-                (OP_MINUS ab.txt:9:12:
-                  (INT_LITERAL ab.txt:9:10:
-                    0
-                  )
-                  (INT_LITERAL ab.txt:9:14:
-                    2
-                  )
-                )
-              )
-              (ASSIGNMENT ab.txt:10:7:
-                (VARIABLE ab.txt:10:5:
-                  a  0
-                )
-                (OP_MULT ab.txt:10:12:
-                  (VARIABLE ab.txt:10:10:
-                    a  0
-                  )
-                  (VARIABLE ab.txt:10:14:
-                    b  2
-                  )
-                )
-              )
-            )
-          )
-          (SEQ ab.txt:13:5:
-            (DECL ab.txt:12:9:
-              c  int
-            )
-            (SEQ ab.txt:13:15:
-              (ASSIGNMENT ab.txt:13:7:
-                (VARIABLE ab.txt:13:5:
-                  c  2
-                )
-                (OP_MINUS ab.txt:13:12:
-                  (VARIABLE ab.txt:13:10:
-                    a  0
-                  )
-                  (VARIABLE ab.txt:13:14:
-                    b  1
-                  )
-                )
-              )
-              (ASSIGNMENT ab.txt:14:7:
-                (VARIABLE ab.txt:14:5:
-                  a  0
-                )
-                (OP_MULT ab.txt:14:12:
-                  (VARIABLE ab.txt:14:10:
-                    a  0
-                  )
-                  (OP_MINUS ab.txt:14:17:
-                    (VARIABLE ab.txt:14:15:
-                      c  2
-                    )
-                    (VARIABLE ab.txt:14:19:
-                      b  1
-                    )
-                  )
-                )
-              )
-            )
-          )
-        )
-        (PRINT_INT ab.txt:16:3:
-          (OP_MULT ab.txt:16:11:
-            (VARIABLE ab.txt:16:9:
-              a  0
-            )
-            (OP_MINUS ab.txt:16:16:
-              (VARIABLE ab.txt:16:14:
-                a  0
-              )
-              (VARIABLE ab.txt:16:18:
-                b  1
-              )
-            )
-          )
-        )
-      )
-    )
-  )
-)
+(SEQ ab.txt:5:3:<br>
+  (SEQ ab.txt:4:3:<br>
+    (DECL ab.txt:3:7:<br>
+      a  int<br>
+    )<br>
+    (DECL ab.txt:4:7:<br>
+      b  int<br>
+    )<br>
+  )<br>
+  (SEQ ab.txt:5:9:<br>
+    (ASSIGNMENT ab.txt:5:5:<br>
+      (VARIABLE ab.txt:5:3:<br>
+        a  0<br>
+      )<br>
+      (INT_LITERAL ab.txt:5:8:<br>
+        2<br>
+      )<br>
+    )<br>
+    (SEQ ab.txt:6:9:<br>
+      (ASSIGNMENT ab.txt:6:5:<br>
+        (VARIABLE ab.txt:6:3:<br>
+          b  1<br>
+        )<br>
+        (INT_LITERAL ab.txt:6:8:<br>
+          1<br>
+        )<br>
+      )<br>
+      (SEQ ab.txt:15:5:<br>
+        (IF ab.txt:7:3:<br>
+          (OP_NOT ab.txt:7:6:<br>
+            (OP_LT ab.txt:7:12:<br>
+              (VARIABLE ab.txt:7:10:<br>
+                a  0<br>
+              )<br>
+              (INT_LITERAL ab.txt:7:15:<br>
+                0<br><br>
+              )<br>
+            )<br>
+          )<br>
+          (SEQ ab.txt:9:5:<br>
+            (DECL ab.txt:8:9:<br>
+              b  int<br>
+            )<br>
+            (SEQ ab.txt:9:15:<br>
+              (ASSIGNMENT ab.txt:9:7:<br>
+                (VARIABLE ab.txt:9:5:<br>
+                  b  2<br>
+                )<br>
+                (OP_MINUS ab.txt:9:12:<br>
+                  (INT_LITERAL ab.txt:9:10:<br>
+                    0<br>
+                  )<br>
+                  (INT_LITERAL ab.txt:9:14:<br>
+                    2<br>
+                  )<br>
+                )<br>
+              )<br>
+              (ASSIGNMENT ab.txt:10:7:<br>
+                (VARIABLE ab.txt:10:5:<br>
+                  a  0<br>
+                )<br>
+                (OP_MULT ab.txt:10:12:<br>
+                  (VARIABLE ab.txt:10:10:<br>
+                    a  0<br>
+                  )<br>
+                  (VARIABLE ab.txt:10:14:<br>
+                    b  2<br>
+                  )<br>
+                )<br>
+              )<br>
+            )<br>
+          )<br>
+          (SEQ ab.txt:13:5:<br>
+            (DECL ab.txt:12:9:<br>
+              c  int<br>
+            )<br>
+            (SEQ ab.txt:13:15:<br>
+              (ASSIGNMENT ab.txt:13:7:<br>
+                (VARIABLE ab.txt:13:5:<br>
+                  c  2<br>
+                )<br>
+                (OP_MINUS ab.txt:13:12:<br>
+                  (VARIABLE ab.txt:13:10:<br>
+                    a  0<br>
+                  )<br>
+                  (VARIABLE ab.txt:13:14:<br>
+                    b  1<br>
+                  )<br>
+                )<br>
+              )<br>
+              (ASSIGNMENT ab.txt:14:7:<br>
+                (VARIABLE ab.txt:14:5:<br>
+                  a  0<br>
+                )<br>
+                (OP_MULT ab.txt:14:12:<br>
+                  (VARIABLE ab.txt:14:10:<br>
+                    a  0<br>
+                  )<br>
+                  (OP_MINUS ab.txt:14:17:<br>
+                    (VARIABLE ab.txt:14:15:<br>
+                      c  2<br>
+                    )<br>
+                    (VARIABLE ab.txt:14:19:<br>
+                      b  1<br>
+                    )<br>
+                  )<br>
+                )<br>
+              )<br>
+            )<br>
+          )<br>
+        )<br>
+        (PRINT_INT ab.txt:16:3:<br>
+          (OP_MULT ab.txt:16:11:<br>
+            (VARIABLE ab.txt:16:9:<br>
+              a  0<br>
+            )<br>
+            (OP_MINUS ab.txt:16:16:<br>
+              (VARIABLE ab.txt:16:14:<br>
+                a  0<br>
+              )<br>
+              (VARIABLE ab.txt:16:18:<br>
+                b  1<br>
+              )<br>
+            )<br>
+          )<br>
+        )<br>
+      )<br>
+    )<br>
+  )<br>
+)<br>
 ........................................................................
