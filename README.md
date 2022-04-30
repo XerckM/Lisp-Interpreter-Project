@@ -112,8 +112,8 @@ end
 ........................................................................
 
 The AST is the S-expression shown below.  (Notice that the
-two variables whose name is `b` have different offsets: 1 and
-2. Variable `c` has offset 2, i.e., shares the same location as the
+two variables whose name is `b` have different offsets: 1 and 2. 
+Variable `c` has offset 2, i.e., shares the same location as the
 variable `b` declared in the "then" branch, because the scopes are
 disjoint.)<br>
 ........................................................................<br>
