@@ -116,135 +116,135 @@ two variables whose name is `b` have different offsets: 1 and
 2. Variable `c` has offset 2, i.e., shares the same location as the
 variable `b` declared in the "then" branch, because the scopes are
 disjoint.)
-........................................................................
+........................................................................<br>
 (SEQ ab.txt:5:3:<br>
-  (SEQ ab.txt:4:3:<br>
-    (DECL ab.txt:3:7:<br>
-      a  int<br>
-    )<br>
-    (DECL ab.txt:4:7:<br>
-      b  int<br>
-    )<br>
-  )<br>
-  (SEQ ab.txt:5:9:<br>
-    (ASSIGNMENT ab.txt:5:5:<br>
-      (VARIABLE ab.txt:5:3:<br>
-        a  0<br>
-      )<br>
-      (INT_LITERAL ab.txt:5:8:<br>
-        2<br>
-      )<br>
-    )<br>
-    (SEQ ab.txt:6:9:<br>
-      (ASSIGNMENT ab.txt:6:5:<br>
-        (VARIABLE ab.txt:6:3:<br>
-          b  1<br>
-        )<br>
-        (INT_LITERAL ab.txt:6:8:<br>
-          1<br>
-        )<br>
-      )<br>
-      (SEQ ab.txt:15:5:<br>
-        (IF ab.txt:7:3:<br>
-          (OP_NOT ab.txt:7:6:<br>
-            (OP_LT ab.txt:7:12:<br>
-              (VARIABLE ab.txt:7:10:<br>
-                a  0<br>
-              )<br>
-              (INT_LITERAL ab.txt:7:15:<br>
-                0<br><br>
-              )<br>
-            )<br>
-          )<br>
-          (SEQ ab.txt:9:5:<br>
-            (DECL ab.txt:8:9:<br>
-              b  int<br>
-            )<br>
-            (SEQ ab.txt:9:15:<br>
-              (ASSIGNMENT ab.txt:9:7:<br>
-                (VARIABLE ab.txt:9:5:<br>
-                  b  2<br>
-                )<br>
-                (OP_MINUS ab.txt:9:12:<br>
-                  (INT_LITERAL ab.txt:9:10:<br>
-                    0<br>
-                  )<br>
-                  (INT_LITERAL ab.txt:9:14:<br>
-                    2<br>
-                  )<br>
-                )<br>
-              )<br>
-              (ASSIGNMENT ab.txt:10:7:<br>
-                (VARIABLE ab.txt:10:5:<br>
-                  a  0<br>
-                )<br>
-                (OP_MULT ab.txt:10:12:<br>
-                  (VARIABLE ab.txt:10:10:<br>
-                    a  0<br>
-                  )<br>
-                  (VARIABLE ab.txt:10:14:<br>
-                    b  2<br>
-                  )<br>
-                )<br>
-              )<br>
-            )<br>
-          )<br>
-          (SEQ ab.txt:13:5:<br>
-            (DECL ab.txt:12:9:<br>
-              c  int<br>
-            )<br>
-            (SEQ ab.txt:13:15:<br>
-              (ASSIGNMENT ab.txt:13:7:<br>
-                (VARIABLE ab.txt:13:5:<br>
-                  c  2<br>
-                )<br>
-                (OP_MINUS ab.txt:13:12:<br>
-                  (VARIABLE ab.txt:13:10:<br>
-                    a  0<br>
-                  )<br>
-                  (VARIABLE ab.txt:13:14:<br>
-                    b  1<br>
-                  )<br>
-                )<br>
-              )<br>
-              (ASSIGNMENT ab.txt:14:7:<br>
-                (VARIABLE ab.txt:14:5:<br>
-                  a  0<br>
-                )<br>
-                (OP_MULT ab.txt:14:12:<br>
-                  (VARIABLE ab.txt:14:10:<br>
-                    a  0<br>
-                  )<br>
-                  (OP_MINUS ab.txt:14:17:<br>
-                    (VARIABLE ab.txt:14:15:<br>
-                      c  2<br>
-                    )<br>
-                    (VARIABLE ab.txt:14:19:<br>
-                      b  1<br>
-                    )<br>
-                  )<br>
-                )<br>
-              )<br>
-            )<br>
-          )<br>
-        )<br>
-        (PRINT_INT ab.txt:16:3:<br>
-          (OP_MULT ab.txt:16:11:<br>
-            (VARIABLE ab.txt:16:9:<br>
-              a  0<br>
-            )<br>
-            (OP_MINUS ab.txt:16:16:<br>
-              (VARIABLE ab.txt:16:14:<br>
-                a  0<br>
-              )<br>
-              (VARIABLE ab.txt:16:18:<br>
-                b  1<br>
-              )<br>
-            )<br>
-          )<br>
-        )<br>
-      )<br>
-    )<br>
-  )<br>
+  &emsp;(SEQ ab.txt:4:3:<br>
+    &emsp;&emsp;(DECL ab.txt:3:7:<br>
+      &emsp;&emsp;&emsp;a  int<br>
+    &emsp;&emsp;)<br>
+    &emsp;&emsp;(DECL ab.txt:4:7:<br>
+      &emsp;&emsp;&emsp;b  int<br>
+    &emsp;&emsp;)<br>
+  &emsp;)<br>
+  &emsp;(SEQ ab.txt:5:9:<br>
+    &emsp;&emsp;(ASSIGNMENT ab.txt:5:5:<br>
+      &emsp;&emsp;&emsp;(VARIABLE ab.txt:5:3:<br>
+        &emsp;&emsp;&emsp;&emsp;a  0<br>
+      &emsp;&emsp;&emsp;)<br>
+      &emsp;&emsp;&emsp;(INT_LITERAL ab.txt:5:8:<br>
+        &emsp;&emsp;&emsp;&emsp;2<br>
+      &emsp;&emsp;&emsp;)<br>
+    &emsp;&emsp;)<br>
+    &emsp;&emsp;(SEQ ab.txt:6:9:<br>
+      &emsp;&emsp;&emsp;(ASSIGNMENT ab.txt:6:5:<br>
+        &emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:6:3:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;b  1<br>
+        &emsp;&emsp;&emsp;&emsp;)<br>
+        &emsp;&emsp;&emsp;&emsp;(INT_LITERAL ab.txt:6:8:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;1<br>
+        &emsp;&emsp;&emsp;&emsp;)<br>
+      &emsp;&emsp;&emsp;)<br>
+      &emsp;&emsp;&emsp;(SEQ ab.txt:15:5:<br>
+        &emsp;&emsp;&emsp;&emsp;(IF ab.txt:7:3:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;(OP_NOT ab.txt:7:6:<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_LT ab.txt:7:12:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:7:10:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(INT_LITERAL ab.txt:7:15:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;(SEQ ab.txt:9:5:<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(DECL ab.txt:8:9:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b  int<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(SEQ ab.txt:9:15:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(ASSIGNMENT ab.txt:9:7:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:9:5:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b  2<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_MINUS ab.txt:9:12:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(INT_LITERAL ab.txt:9:10:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(INT_LITERAL ab.txt:9:14:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(ASSIGNMENT ab.txt:10:7:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:10:5:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_MULT ab.txt:10:12:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:10:10:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:10:14:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b  2<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;(SEQ ab.txt:13:5:<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(DECL ab.txt:12:9:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;c  int<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(SEQ ab.txt:13:15:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(ASSIGNMENT ab.txt:13:7:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:13:5:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;c  2<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_MINUS ab.txt:13:12:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:13:10:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:13:14:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b  1<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(ASSIGNMENT ab.txt:14:7:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:14:5:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_MULT ab.txt:14:12:<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:14:10:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_MINUS ab.txt:14:17:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:14:15:<br>
+                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;c  2<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:14:19:<br>
+                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b  1<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+        &emsp;&emsp;&emsp;&emsp;)<br>
+        &emsp;&emsp;&emsp;&emsp;(PRINT_INT ab.txt:16:3:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;(OP_MULT ab.txt:16:11:<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:16:9:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(OP_MINUS ab.txt:16:16:<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:16:14:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;a  0<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(VARIABLE ab.txt:16:18:<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b  1<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;)<br>
+        &emsp;&emsp;&emsp;&emsp;)<br>
+      &emsp;&emsp;&emsp;)<br>
+    &emsp;&emsp;)<br>
+  &emsp;)<br>
 )<br>
 ........................................................................
