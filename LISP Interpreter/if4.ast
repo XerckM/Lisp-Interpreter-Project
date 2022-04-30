@@ -1,0 +1,16 @@
+(IF ../examples/if.txt:2:3:
+  (OP_GTE ../examples/if.txt:2:8:
+    (INT_LITERAL ../examples/if.txt:2:6:
+      3
+    )
+    (INT_LITERAL ../examples/if.txt:2:10:
+      3
+    )
+  )
+  (PRINT_BOOL ../examples/if.txt:3:5:
+    (BOOL_LITERAL ../examples/if.txt:3:11:
+      True
+    )
+  )
+()
+)

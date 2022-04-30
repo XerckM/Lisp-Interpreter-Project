@@ -1,0 +1,5 @@
+(PRINT_INT ../examples/print.txt:2:3:
+  (INT_LITERAL ../examples/print.txt:2:9:
+    77
+  )
+)

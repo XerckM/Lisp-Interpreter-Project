@@ -1,0 +1,89 @@
+(SEQ ../examples/hiding.txt:4:4:
+  (SEQ ../examples/hiding.txt:3:4:
+    (DECL ../examples/hiding.txt:2:8:
+      a  int
+    )
+    (DECL ../examples/hiding.txt:3:8:
+      b  int
+    )
+  )
+  (SEQ ../examples/hiding.txt:4:10:
+    (ASSIGNMENT ../examples/hiding.txt:4:6:
+      (VARIABLE ../examples/hiding.txt:4:4:
+        a  0
+      )
+      (INT_LITERAL ../examples/hiding.txt:4:9:
+        2
+      )
+    )
+    (SEQ ../examples/hiding.txt:5:10:
+      (ASSIGNMENT ../examples/hiding.txt:5:6:
+        (VARIABLE ../examples/hiding.txt:5:4:
+          b  1
+        )
+        (INT_LITERAL ../examples/hiding.txt:5:9:
+          5
+        )
+      )
+      (SEQ ../examples/hiding.txt:11:6:
+        (WHILE ../examples/hiding.txt:6:4:
+          (OP_NOT ../examples/hiding.txt:6:10:
+            (OP_EQ ../examples/hiding.txt:6:16:
+              (VARIABLE ../examples/hiding.txt:6:14:
+                a  0
+              )
+              (VARIABLE ../examples/hiding.txt:6:18:
+                b  1
+              )
+            )
+          )
+          (SEQ ../examples/hiding.txt:8:6:
+            (DECL ../examples/hiding.txt:7:10:
+              b  int
+            )
+            (SEQ ../examples/hiding.txt:8:16:
+              (ASSIGNMENT ../examples/hiding.txt:8:8:
+                (VARIABLE ../examples/hiding.txt:8:6:
+                  b  2
+                )
+                (OP_MULT ../examples/hiding.txt:8:13:
+                  (INT_LITERAL ../examples/hiding.txt:8:11:
+                    2
+                  )
+                  (VARIABLE ../examples/hiding.txt:8:15:
+                    a  0
+                  )
+                )
+              )
+              (SEQ ../examples/hiding.txt:9:13:
+                (PRINT_INT ../examples/hiding.txt:9:6:
+                  (VARIABLE ../examples/hiding.txt:9:12:
+                    b  2
+                  )
+                )
+                (ASSIGNMENT ../examples/hiding.txt:10:8:
+                  (VARIABLE ../examples/hiding.txt:10:6:
+                    a  0
+                  )
+                  (OP_PLUS ../examples/hiding.txt:10:13:
+                    (VARIABLE ../examples/hiding.txt:10:11:
+                      a  0
+                    )
+                    (INT_LITERAL ../examples/hiding.txt:10:15:
+                      1
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+        (PRINT_INT ../examples/hiding.txt:12:4:
+          (VARIABLE ../examples/hiding.txt:12:10:
+            b  1
+          )
+        )
+      )
+    )
+  )
+)

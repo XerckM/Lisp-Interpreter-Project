@@ -1,0 +1,130 @@
+(SEQ ../examples/ab.txt:5:3:
+  (SEQ ../examples/ab.txt:4:3:
+    (DECL ../examples/ab.txt:3:7:
+      a  int
+    )
+    (DECL ../examples/ab.txt:4:7:
+      b  int
+    )
+  )
+  (SEQ ../examples/ab.txt:5:9:
+    (ASSIGNMENT ../examples/ab.txt:5:5:
+      (VARIABLE ../examples/ab.txt:5:3:
+        a  0
+      )
+      (INT_LITERAL ../examples/ab.txt:5:8:
+        2
+      )
+    )
+    (SEQ ../examples/ab.txt:6:9:
+      (ASSIGNMENT ../examples/ab.txt:6:5:
+        (VARIABLE ../examples/ab.txt:6:3:
+          b  1
+        )
+        (INT_LITERAL ../examples/ab.txt:6:8:
+          1
+        )
+      )
+      (SEQ ../examples/ab.txt:15:5:
+        (IF ../examples/ab.txt:7:3:
+          (OP_NOT ../examples/ab.txt:7:6:
+            (OP_LT ../examples/ab.txt:7:12:
+              (VARIABLE ../examples/ab.txt:7:10:
+                a  0
+              )
+              (INT_LITERAL ../examples/ab.txt:7:15:
+                0
+              )
+            )
+          )
+          (SEQ ../examples/ab.txt:9:5:
+            (DECL ../examples/ab.txt:8:9:
+              b  int
+            )
+            (SEQ ../examples/ab.txt:9:15:
+              (ASSIGNMENT ../examples/ab.txt:9:7:
+                (VARIABLE ../examples/ab.txt:9:5:
+                  b  2
+                )
+                (OP_MINUS ../examples/ab.txt:9:12:
+                  (INT_LITERAL ../examples/ab.txt:9:10:
+                    0
+                  )
+                  (INT_LITERAL ../examples/ab.txt:9:14:
+                    2
+                  )
+                )
+              )
+              (ASSIGNMENT ../examples/ab.txt:10:7:
+                (VARIABLE ../examples/ab.txt:10:5:
+                  a  0
+                )
+                (OP_MULT ../examples/ab.txt:10:12:
+                  (VARIABLE ../examples/ab.txt:10:10:
+                    a  0
+                  )
+                  (VARIABLE ../examples/ab.txt:10:14:
+                    b  2
+                  )
+                )
+              )
+            )
+          )
+          (SEQ ../examples/ab.txt:13:5:
+            (DECL ../examples/ab.txt:12:9:
+              c  int
+            )
+            (SEQ ../examples/ab.txt:13:15:
+              (ASSIGNMENT ../examples/ab.txt:13:7:
+                (VARIABLE ../examples/ab.txt:13:5:
+                  c  2
+                )
+                (OP_MINUS ../examples/ab.txt:13:12:
+                  (VARIABLE ../examples/ab.txt:13:10:
+                    a  0
+                  )
+                  (VARIABLE ../examples/ab.txt:13:14:
+                    b  1
+                  )
+                )
+              )
+              (ASSIGNMENT ../examples/ab.txt:14:7:
+                (VARIABLE ../examples/ab.txt:14:5:
+                  a  0
+                )
+                (OP_MULT ../examples/ab.txt:14:12:
+                  (VARIABLE ../examples/ab.txt:14:10:
+                    a  0
+                  )
+                  (OP_MINUS ../examples/ab.txt:14:17:
+                    (VARIABLE ../examples/ab.txt:14:15:
+                      c  2
+                    )
+                    (VARIABLE ../examples/ab.txt:14:19:
+                      b  1
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+        (PRINT_INT ../examples/ab.txt:16:3:
+          (OP_MULT ../examples/ab.txt:16:11:
+            (VARIABLE ../examples/ab.txt:16:9:
+              a  0
+            )
+            (OP_MINUS ../examples/ab.txt:16:16:
+              (VARIABLE ../examples/ab.txt:16:14:
+                a  0
+              )
+              (VARIABLE ../examples/ab.txt:16:18:
+                b  1
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)

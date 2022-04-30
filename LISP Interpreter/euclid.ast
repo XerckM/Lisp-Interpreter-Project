@@ -1,0 +1,99 @@
+(SEQ ../examples/euclid.txt:4:4:
+  (SEQ ../examples/euclid.txt:3:12:
+    (DECL ../examples/euclid.txt:3:8:
+      a  int
+    )
+    (DECL ../examples/euclid.txt:3:16:
+      b  int
+    )
+  )
+  (SEQ ../examples/euclid.txt:4:11:
+    (ASSIGNMENT ../examples/euclid.txt:4:6:
+      (VARIABLE ../examples/euclid.txt:4:4:
+        a  0
+      )
+      (INT_LITERAL ../examples/euclid.txt:4:9:
+        15
+      )
+    )
+    (SEQ ../examples/euclid.txt:5:11:
+      (ASSIGNMENT ../examples/euclid.txt:5:6:
+        (VARIABLE ../examples/euclid.txt:5:4:
+          b  1
+        )
+        (INT_LITERAL ../examples/euclid.txt:5:9:
+          20
+        )
+      )
+      (SEQ ../examples/euclid.txt:6:11:
+        (PRINT_INT ../examples/euclid.txt:6:4:
+          (VARIABLE ../examples/euclid.txt:6:10:
+            a  0
+          )
+        )
+        (SEQ ../examples/euclid.txt:6:21:
+          (PRINT_INT ../examples/euclid.txt:6:14:
+            (VARIABLE ../examples/euclid.txt:6:20:
+              b  1
+            )
+          )
+          (SEQ ../examples/euclid.txt:11:6:
+            (WHILE ../examples/euclid.txt:7:4:
+              (OP_NOT ../examples/euclid.txt:7:10:
+                (OP_EQ ../examples/euclid.txt:7:16:
+                  (VARIABLE ../examples/euclid.txt:7:14:
+                    a  0
+                  )
+                  (VARIABLE ../examples/euclid.txt:7:18:
+                    b  1
+                  )
+                )
+              )
+              (IF ../examples/euclid.txt:8:7:
+                (OP_LT ../examples/euclid.txt:8:12:
+                  (VARIABLE ../examples/euclid.txt:8:10:
+                    a  0
+                  )
+                  (VARIABLE ../examples/euclid.txt:8:14:
+                    b  1
+                  )
+                )
+                (ASSIGNMENT ../examples/euclid.txt:8:23:
+                  (VARIABLE ../examples/euclid.txt:8:21:
+                    b  1
+                  )
+                  (OP_MINUS ../examples/euclid.txt:8:28:
+                    (VARIABLE ../examples/euclid.txt:8:26:
+                      b  1
+                    )
+                    (VARIABLE ../examples/euclid.txt:8:30:
+                      a  0
+                    )
+                  )
+                )
+                (ASSIGNMENT ../examples/euclid.txt:9:14:
+                  (VARIABLE ../examples/euclid.txt:9:12:
+                    a  0
+                  )
+                  (OP_MINUS ../examples/euclid.txt:9:19:
+                    (VARIABLE ../examples/euclid.txt:9:17:
+                      a  0
+                    )
+                    (VARIABLE ../examples/euclid.txt:9:21:
+                      b  1
+                    )
+                  )
+                )
+              )
+            )
+            (PRINT_INT ../examples/euclid.txt:12:4:
+              (VARIABLE ../examples/euclid.txt:12:10:
+                a  0
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
