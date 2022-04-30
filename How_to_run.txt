@@ -1,0 +1,53 @@
+
+This file gives a little help in getting started with Emacs Lisp for the
+purposes of your project.
+
+**** NOTE: When you evaluate your program Emacs may enter into an
+****       udefined state and you might have to kill it.  So be careful
+****       not to have any unsaved buffers with important contents.
+
+
+General
+-------
+
+A gentle introduction to Emacs Lisp can be found here:
+
+   https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html
+
+If you are using a properly-installed Emacs, you will find this text in
+the info directory (press <C-h i>, then navigate to `Emacs Lisp Intro`
+and press <m>).
+
+It is highly recommended that you spend a few hours reading this text.
+You need not go into all the details, e.g., you don't have to use
+macros, or the "while" construct.  Just have a look at what is there,
+and come back for more details if you need them.
+
+It might be a good idea to familiarise yourself with the basic editing
+capabilities of Emacs.  (A simple tutorial is available in the editor
+itself.)  It is a very powerful editor that you might want to use
+in the future, but for now using it will make the task of programming in
+Emacs Lisp much easier.
+
+
+Reading your program and data
+-----------------------------
+
+Let us assume that your program is in file `interpreter.el`.
+
+After you have written and tested its various parts (see the tutorial
+mentioned above), you may want to execute it with some serious data.
+
+This can be done in many ways.  A simple one is described below:
+
+1. Load the program into Emacs, then type <M-x eval-buffer>.  This
+   will cause the Lisp interpreter to read in all your definitions.
+
+2. Load the file with the data (e.g., the AST for the program you will
+   interpret) into a buffer, say `data.ast`.  Make sure that the cursor
+   is at the beginning of the buffer.
+
+3. Evaluate `(load_data "data.ast")`.
+   
+4. Evaluate `(run)`.
+-----------------------------
